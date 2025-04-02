@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">HERNAN</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hp.jpg" alt="hp">
+            </div>
+            <h1>HERNAN PEREZ</h1>
+            <h2>Unity Developer XR/AR/VR</h2>
+            <div class="redes">
+             <!--   <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>-->
+                <a href="https://www.linkedin.com/in/hernan-perez-h/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/watch?v=erqCYScjVJA"><i class="fa-brands fa-unity"></i></a>
+                <a href="https://hernanperez.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy <span>Hernan Perez</span> Desarrollador de Videojuegos en Unity con más de 8 años de experiencia, especializado en experiencias inmersivas, juegos educativos y simulaciones con tecnologías AR/VR/XR. Como instructor en desarrollo de videojuegos y entornos interactivos, he perfeccionado mis habilidades para comunicar conceptos complejos, liderar equipos y fomentar la creatividad. Apasionado por innovar y contribuir al crecimiento profesional en la industria.</p>
+            <p>Mi enfoque se centra en la creación de experiencias interactivas que no solo entretienen, sino que también educan y capacitan. Estoy comprometido con el aprendizaje continuo y la mejora de mis habilidades para enfrentar los desafíos tecnológicos del futuro.</p>
+            <a href="CV/CV Hernan Perez.pdf" download="CV_Hernan_Perez" style="text-decoration: none;">
+                <button>
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Unity3D</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 90%;">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C# Programming</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 80%;">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>AR Development</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 70%;">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>VR Development</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 80%;">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>3D Interaction Design</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 80%;">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso"style="width: 90%;">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso"style="width: 85%;">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso"style="width: 80%;">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 80%;">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 75%;">
+                                <span> 75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Desarrollo de Videojuegos</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2013 - 2015</span>
+                        <p>El tecnólogo en desarrollo de videojuegos y entornos interactivos está capacitado para
+                            generar el código que definirá el comportamiento de cada elemento del videojuego
+                            (personajes, objetos, interfaces gráficas de usuario etc.) y la interacción del videojuego con
+                            el jugador. También comprende de manera clara las fases de su diseño y todos sus
+                            componentes, como la experiencia de usuario, la usabilidad, la narrativa, etc. Incorpora los
+                            recursos audiovisuales, que le brindarán un orden lógico al proceso de producción,
+                            asegurando de manera efectiva el proyecto en toda su extensión.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Aplicación de la Metodología Scrum para Proyectos de Desarrollo de Software</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2019 - 2019</span>
+                        <p>Este programa de formación se orienta al conocimiento y aplicación de un marco de trabajo ágil
+                            para la gestión de proyectos SCRUM, siendo uno de los marcos de trabajo que se enmarca en el
+                            concepto de agilísmo para la gestión de proyectos de software que más se utiliza, mostrando
+                            excelentes resultados en las empresas en las que se ha implementado.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Creación de Aplicaciones con Realidad Aumentada</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2019 - 2019</span>
+                        <p>Creación de Aplicaciones con Realidad Aumentada, estará en la capacidad para asistir en la creación e implementación de experiencias interactivas en 3D mediante el uso de tecnologías de realidad aumentada, participando en el modelado y animación 3D, integración de objetos virtuales con entornos reales, y la programación básica de interacciones. Además, apoyará en pruebas de calidad, optimización de recursos, y documentación técnica, colaborando en equipos multidisciplinarios para desarrollar aplicaciones en sectores como videojuegos, educación, publicidad y simulaciones.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>DESARROLLADOR DE VIDEOJUEGOS</h4>   
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2024 - 2024</span>
+                        <p>Desarrollo he implementación del simulador de manejo, digitalización y clasificación de documentos y archivos electrónico</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>LÍDER TECH SELECU</h4>
+                        <span class="casa">Cosmo Schools </span>
+                        <span class="fecha">2023 - 2024</span>
+                        <p>• Dirigí la estrategia tecnológica y supervisé el desarrollo e implementación de soluciones 
+                            organizacionales. </p>
+                            <p>  • Lideré un equipo multidisciplinario para desarrollar productos y servicios digitales 
+                            innovadores.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>DESARROLLADOR DE VIDEOJUEGOS</h4>
+                        <span class="casa">Holss</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>• Desarrollé y programé mecánicas interactivas para varios proyectos de videojuegos. </p>
+                        <p>• Colaboré con diseñadores y artistas para crear experiencias de juego inmersivas.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>INSTRUCTOR EN DESARROLLO DE VIDEOJUEGOS Y ENTORNOS INTERACTIVOS</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2020 - 2023</span>
+                        <p>• Impartí técnicas de desarrollo de videojuegos y diseño de entornos interactivos a 
+                            estudiantes y profesionales. </p>
+                        <p>• Desarrollé y ofrecí programas de formación completos centrados en herramientas y 
+                            prácticas estándares de la industria. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="item der">
+                        <h4>lIDER DE DESARROLLO TECNOLOGICO</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2019 - 2019</span>
+                        <p>• Lideré el desarrollo de simuladores y aplicaciones para el Centro de Comercio. </p>
+                        <p>• • Trabajé de cerca con los instructores para alinear las soluciones tecnológicas con los 
+                            objetivos dela institución y los programas de formación. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>APOYO TECNOLOGICO</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
+                        <span class="fecha">2018 - 2018</span>
+                        <p>• Apoyé en el desarrollo de simuladores y aplicaciones para fines de formación. </p>
+                        <p>• Asistí en el mantenimiento y mejora de soluciones de software existentes. </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            
+            <!-- Proyecto Destacado - VelozMente -->
+            <div class="proyecto-destacado">
+                <div class="contenedor-video-destacado">
+                    <!-- Video en lugar de imagen -->
+                    <video autoplay muted loop playsinline>
+                        <source src="Videos/prueba.mp4" type="video/mp4">
+                        <!-- Fallback por si el video no carga -->
+                        <img src="img/port_veloz.png" alt="Demo de VelozMente">
+                    </video>
+                    <div class="overlay-destacado">
+                        <div class="info-destacado">
+                            <h3>VELOZMENTE</h3>
+                            <p>Juego de pensamiento matemático contra reloj</p>
+                            <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
+                                <i class="fab fa-itch-io"></i> Jugar ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="descripcion-destacada">
+                    <h3>VelozMente</h3>
+                    <p class="tagline">Juego de pensamiento matemático contra reloj</p>
+                    
+                    <div class="caracteristicas-grid">
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-brain"></i>
+                            <h4>Ejercicio cognitivo</h4>
+                            <p>Retos matemáticos y de comprensión lectora que fortalecen el sentido de lateralidad.</p>
+                        </div>
+                        
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <h4>Decide ahora</h4>
+                            <p>Fomenta la toma de decisiones rápida en un ambiente de recompensa y gamificación.</p>
+                        </div>
+                        
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <h4>Más que un juego</h4>
+                            <p>Aprende a cumplir objetivos dentro de un entorno gamificado diseñado para educación.</p>
+                        </div>
+                        
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-users"></i>
+                            <h4>Individual o grupal</h4>
+                            <p>Diseñado para disfrutarse solo o en grupo, perfecto para aulas o familia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tecnologias">
+                        <span>Tecnologías:</span>
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">UI/UX</span>
+                        <span class="tech-tag">Game Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-destacado">
+                <div class="contenedor-img-destacado">
+                    <img src="img/port_veloz.png" alt="VelozMente">
+                    <div class="overlay-destacado">
+                        <div class="info-destacado">
+                            <h3>VelozMente</h3>
+                            <p>Juego educativo de matemáticas y comprensión lectora</p>
+                            <a href="https://hernanperez.itch.io/velozmente" target="_blank" rel="noopener noreferrer" class="btn-destacado">
+                    <i class="fab fa-itch-io"></i> Jugar en itch.io
+                </a>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="descripcion-destacada">
+                    <h3>VelozMente</h3>
+                    <p class="tagline">Juego de pensamiento matemático contra reloj</p>
+                    
+                    <div class="caracteristicas-grid">
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-brain"></i>
+                            <h4>Ejercicio cognitivo</h4>
+                            <p>Retos matemáticos y de comprensión lectora que fortalecen el sentido de lateralidad.</p>
+                        </div>
+                        
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <h4>Decide ahora</h4>
+                            <p>Fomenta la toma de decisiones rápida en un ambiente de recompensa y gamificación.</p>
+                        </div>
+                        
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <h4>Más que un juego</h4>
+                            <p>Aprende a cumplir objetivos dentro de un entorno gamificado diseñado para educación.</p>
+                        </div>
+                        
+                        <div class="caracteristica-item">
+                            <i class="fa-solid fa-users"></i>
+                            <h4>Individual o grupal</h4>
+                            <p>Diseñado para disfrutarse solo o en grupo, perfecto para aulas o familia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tecnologias">
+                        <span>Tecnologías:</span>
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">UI/UX</span>
+                        <span class="tech-tag">Game Design</span>
+                    </div>
+                </div>
+            </div>
+            
+
+           
+            <!-- Otros proyectos (manteniendo tu estructura actual) 
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                Resto de tus proyectos... 
+            </div>-->
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Nicaragua 159, San Rafael Mza
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: 2384 - 4343443 
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: cw@example.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
