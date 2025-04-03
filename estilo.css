@@ -486,6 +486,159 @@ html{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+}
+
+
+/* Estilos para la vista resumida */
+.proyectos-resumen {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para la miniatura del proyecto */
+.proyecto-miniatura {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-miniatura:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto-miniatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+/* Info miniatura (oculta inicialmente) */
+.info-miniatura {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(30, 35, 38, 0.9);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Botón de detalles (oculto inicialmente) */
+.btn-ver-detalles {
+    background: #1CB698;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+}
+
+/* Efectos al hacer hover */
+.proyecto-miniatura:hover .info-miniatura {
+    transform: translateY(0);
+}
+
+.proyecto-miniatura:hover .btn-ver-detalles {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s; /* Pequeño retraso para mejor efecto */
+}
+
+.proyecto-miniatura:hover img {
+    filter: brightness(0.7); /* Oscurece la imagen al hacer hover */
+}
+
+@media (hover: none) {
+    .info-miniatura {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .btn-ver-detalles {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+* CONTENEDOR PRINCIPAL */
+.contenedor-proyectos-parejas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+/* ESTILOS ESPECÍFICOS PARA LA VISTA EXPANDIDA */
+.todos-proyectos .proyecto-destacado {
+    margin-bottom: 0; /* Elimina el margen inferior ya que lo maneja el gap */
+}
+
+.todos-proyectos .descripcion-destacada {
+    padding: 1rem;
+}
+
+.todos-proyectos .caracteristicas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+/* Estilos para la vista expandida */
+.todos-proyectos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e2326;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 2rem 0;
+}
+
+.todos-proyectos h2 {
+    font-size: 36px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+    color: #1CB698;
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: transparent;
+    color: #1CB698;
+    border: 2px solid #1CB698;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contenedor-proyectos-completos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Asegurar que los proyectos destacados se vean bien en la vista expandida */
+.todos-proyectos .proyecto-destacado {
+    margin-bottom: 3rem;
+    background: #252A2E;
 }
 
 /* ESTILOS PARA PROYECTO DESTACADO */

@@ -72,6 +72,55 @@ if (btnDestacado) {
 }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Botón "Ver todos"
+    const btnVerTodos = document.getElementById('btn-ver-todos');
+    const seccionProyectos = document.getElementById('todos-proyectos');
+    
+    btnVerTodos.addEventListener('click', function() {
+        seccionProyectos.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Evita scroll en el fondo
+    });
+    
+    // Botón "Cerrar"
+    const btnCerrar = document.getElementById('btn-cerrar-proyectos');
+    btnCerrar.addEventListener('click', function() {
+        seccionProyectos.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Botones "Ver detalles" individuales
+    const botonesDetalles = document.querySelectorAll('.btn-ver-detalles');
+    botonesDetalles.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const proyectoId = this.getAttribute('data-proyecto');
+            seccionProyectos.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            // Scroll al proyecto específico
+            const proyectoCompleto = document.getElementById(`proyecto-${proyectoId}`);
+            proyectoCompleto.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+ocument.addEventListener('DOMContentLoaded', function() {
+    const btnVerTodos = document.getElementById('btn-ver-todos');
+    const btnCerrar = document.getElementById('btn-cerrar-proyectos');
+    const seccionProyectos = document.getElementById('todos-proyectos');
+    
+    btnVerTodos.addEventListener('click', function() {
+        seccionProyectos.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        window.scrollTo(0, 0); // Scroll al inicio
+    });
+    
+    btnCerrar.addEventListener('click', function() {
+        seccionProyectos.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+});
+
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
