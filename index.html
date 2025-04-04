@@ -287,7 +287,7 @@
         
         <!-- Proyectos destacados (muestra solo los principales) -->
         <div class="proyectos-resumen">
-            <!-- Proyecto 1 -->
+            <!-- Laboratorio financiero contable -->
             <div class="proyecto-miniatura">
                 <img src="img/interactive.png" alt="Laboratorio financiero contable">
                 <div class="info-miniatura">
@@ -296,20 +296,20 @@
                 </div>
             </div>
             
-            <!-- Proyecto 2 -->
+            <!-- proyecto-corona-training-->
             <div class="proyecto-miniatura">
-                <img src="img/corona.png" alt="Proyecto 2">
+                <img src="img/corona.png" alt="proyecto-corona-training">
                 <div class="info-miniatura">
                     <h3>Corona Training</h3>
-                    <button class="btn-ver-detalles" data-proyecto="proyecto2">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-proyecto="proyecto-corona-training">Ver detalles</button>
                 </div>
             </div>
-             <!-- Proyecto 3 -->
+             <!-- electrico -->
              <div class="proyecto-miniatura">
-                <img src="img/electrico.png" alt="Proyecto 3">
+                <img src="img/electrico.png" alt="electrico">
                 <div class="info-miniatura">
                     <h3>Mantenimiento de lineas de alta tensión</h3>
-                    <button class="btn-ver-detalles" data-proyecto="proyecto3">Ver detalles</button>
+                    <button class="btn-ver-detalles" data-proyecto="electrico">Ver detalles</button>
                 </div>
             </div>
              <!-- Proyecto 4 -->
@@ -379,6 +379,15 @@
                     </div>
                 </div>
 
+                 <!-- Proyecto 11 -->
+                 <div class="proyecto-miniatura">
+                    <img src="img/BANCO SENA-01-01.png" alt="Proyecto 11">
+                    <div class="info-miniatura">
+                        <h3>Producto Tecnopedagogico</h3>
+                        <button class="btn-ver-detalles" data-proyecto="proyecto11">Ver detalles</button>
+                    </div>
+                </div>
+
          </div>
          <!-- Botón para ver todos -->
         <button id="btn-ver-todos" class="btn-destacado">
@@ -399,7 +408,7 @@
         
         <!-- Contenedor de proyectos completos -->
         <div class="contenedor-proyectos-completos">
-            <!-- Proyecto 1 Completo -->
+            <!-- Laboratorio financiero contable -->
             <div id="Laboratorio financiero contable" class="proyecto-destacado">
                 <!-- ... Todo el contenido detallado de VelozMente ... -->
                 <div class="proyecto-destacado">
@@ -472,38 +481,49 @@
                 </div>
             </div>
             
-            <!-- Proyecto 2 Completo -->
-            <div id="proyecto-2" class="proyecto-destacado">
-                <!-- ... Todo el contenido detallado del segundo proyecto ... -->
+            <!-- proyecto-corona-training -->
+            <div id="proyecto-corona-training" class="proyecto-destacado">
+                <!-- ... Todo el contenido detallado de VelozMente ... -->
                 <div class="proyecto-destacado">
-                    <div class="contenedor-img-destacado">
-                        <img src="img/port_veloz.png" alt="VelozMente">
+                    <div class="contenedor-video-destacado">
+                        <!-- Video en lugar de imagen -->
+                        <video autoplay muted loop playsinline>
+                            <source src="Videos/corona.mp4" type="video/mp4">
+                            <!-- Fallback por si el video no carga -->
+                            <img src="img/corona.png" alt="proyecto-corona-training">
+                        </video>
                         <div class="overlay-destacado">
                             <div class="info-destacado">
-                                <h3>VelozMente</h3>
-                                <p>Juego educativo de matemáticas y comprensión lectora</p>
-                                <a href="https://hernanperez.itch.io/velozmente" target="_blank" rel="noopener noreferrer" class="btn-destacado">
-                        <i class="fab fa-itch-io"></i> Jugar en itch.io
-                    </a>
+                                <h3>Corona Training</h3>
+                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
+                                    simulados. </p>
                             </div>
+                            <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
+                                    <i class="fab fa-itch-io"></i> Jugar ahora
+                                </a> 
+                            </div> -->
                         </div> 
                     </div>
                     
                     <div class="descripcion-destacada">
-                        <h3>VelozMente</h3>
-                        <p class="tagline">Juego de pensamiento matemático contra reloj</p>
+                        <h3>Corona Training</h3>
+                        <p class="tagline">Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
+                            simulados.</p>
                         
                         <div class="caracteristicas-grid">
                             <div class="caracteristica-item">
                                 <i class="fa-solid fa-brain"></i>
                                 <h4>Ejercicio cognitivo</h4>
-                                <p>Retos matemáticos y de comprensión lectora que fortalecen el sentido de lateralidad.</p>
+                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
+                                    simulados con toma de decisiones basados en casos reales.</p>
                             </div>
                             
                             <div class="caracteristica-item">
                                 <i class="fa-solid fa-clock"></i>
                                 <h4>Decide ahora</h4>
-                                <p>Fomenta la toma de decisiones rápida en un ambiente de recompensa y gamificación.</p>
+                                <p>Fomenta la toma de decisiones correctas en un ambiente industrial
+                                    controlado que permita recrear las condiciones reales en el entorno empresarial.
+                                </p>
                             </div>
                             
                             <div class="caracteristica-item">
@@ -530,7 +550,74 @@
                 </div>
             </div>
             
-            <!-- Agregar más proyectos aquí -->
+             <!-- electrico -->
+             <div id="electrico" class="proyecto-destacado">
+                <!-- ... Todo el contenido detallado de VelozMente ... -->
+                <div class="proyecto-destacado">
+                    <div class="contenedor-video-destacado">
+                        <!-- Video en lugar de imagen -->
+                        <video autoplay muted loop playsinline>
+                            <source src="Videos/electrico.mp4" type="video/mp4">
+                            <!-- Fallback por si el video no carga -->
+                            <img src="img/electrico.png" alt="electrico">
+                        </video>
+                        <div class="overlay-destacado">
+                            <div class="info-destacado">
+                                <h3>Corona Training</h3>
+                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
+                                    simulados. </p>
+                            </div>
+                            <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
+                                    <i class="fab fa-itch-io"></i> Jugar ahora
+                                </a> 
+                            </div> -->
+                        </div> 
+                    </div>
+                    
+                    <div class="descripcion-destacada">
+                        <h3>Corona Training</h3>
+                        <p class="tagline">Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
+                            simulados.</p>
+                        
+                        <div class="caracteristicas-grid">
+                            <div class="caracteristica-item">
+                                <i class="fa-solid fa-brain"></i>
+                                <h4>Ejercicio cognitivo</h4>
+                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
+                                    simulados con toma de decisiones basados en casos reales.</p>
+                            </div>
+                            
+                            <div class="caracteristica-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <h4>Decide ahora</h4>
+                                <p>Fomenta la toma de decisiones correctas en un ambiente industrial
+                                    controlado que permita recrear las condiciones reales en el entorno empresarial.
+                                </p>
+                            </div>
+                            
+                            <div class="caracteristica-item">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <h4>Más que un juego</h4>
+                                <p>Aprende a cumplir objetivos dentro de un entorno gamificado diseñado para educación.</p>
+                            </div>
+                            
+                            <div class="caracteristica-item">
+                                <i class="fa-solid fa-users"></i>
+                                <h4>Individual o grupal</h4>
+                                <p>Diseñado para disfrutarse solo o en grupo, perfecto para aulas o familia.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tecnologias">
+                            <span>Tecnologías:</span>
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Game Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

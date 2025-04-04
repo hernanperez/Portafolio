@@ -89,22 +89,24 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'auto';
     });
     
-    // Botones "Ver detalles" individuales
-    const botonesDetalles = document.querySelectorAll('.btn-ver-detalles');
-    botonesDetalles.forEach(boton => {
-        boton.addEventListener('click', function() {
-            const proyectoId = this.getAttribute('data-proyecto');
-            seccionProyectos.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            
-            // Scroll al proyecto específico
-            const proyectoCompleto = document.getElementById(`proyecto-${proyectoId}`);
-            proyectoCompleto.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-});
+   // Botones "Ver detalles" individuales
+   const botonesDetalles = document.querySelectorAll('.btn-ver-detalles');
+   botonesDetalles.forEach(boton => {
+       boton.addEventListener('click', function() {
+           const proyectoId = this.getAttribute('data-proyecto');
+           seccionProyectos.style.display = 'block';
+           document.body.style.overflow = 'hidden';
+           
+           // Scroll al proyecto específico
+           const proyectoCompleto = document.getElementById(proyectoId);
+           if (proyectoCompleto) {
+               proyectoCompleto.scrollIntoView({ behavior: 'smooth' });
+           }
+           proyectoCompleto.scrollIntoView({ behavior: 'smooth' });
+       });
+   });
 
-ocument.addEventListener('DOMContentLoaded', function() {
+   ocument.addEventListener('DOMContentLoaded', function() {
     const btnVerTodos = document.getElementById('btn-ver-todos');
     const btnCerrar = document.getElementById('btn-cerrar-proyectos');
     const seccionProyectos = document.getElementById('todos-proyectos');
@@ -120,6 +122,10 @@ ocument.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'auto';
     });
 });
+});
+
+
+
 
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
