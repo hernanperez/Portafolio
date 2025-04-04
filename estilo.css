@@ -474,6 +474,7 @@ html{
 }
 .portfolio .contenido-seccion{
     max-width: 1100px;
+   
     margin: auto;
 }
 .portfolio h2{
@@ -496,8 +497,15 @@ html{
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
+   
+    
 }
 
+@media (max-width: 768px) {
+    .contenedor-proyectos {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
 /* Estilos para la miniatura del proyecto */
 .proyecto-miniatura {
     position: relative;
@@ -517,6 +525,8 @@ html{
     object-fit: cover;
     transition: filter 0.3s ease;
 }
+
+
 
 /* Info miniatura (oculta inicialmente) */
 .info-miniatura {
@@ -665,7 +675,7 @@ html{
     justify-content: center;
    /* background-color: #1e2326;*/
     border: 1px solid rgba(28, 182, 152, 0.3);
-    margin-top: 75px; /* Baja el contenedor */
+    margin-top: 195px; /* Baja el contenedor */
 }
 
 .contenedor-video-destacado video {
