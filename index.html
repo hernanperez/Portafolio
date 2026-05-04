@@ -2,1213 +2,382 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Hernan Perez | XR/AR/VR Developer</title>
+    <meta name="description" content="Portafolio de Hernan Perez, Unity Developer especializado en experiencias inmersivas, juegos educativos y simulaciones.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style_v2.css">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="#">HERNAN</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    </div>
 
-    <!-- SECCION INICIO -->
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/hp.jpg" alt="hp">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">HP<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+        </ul>
+        <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <h2 class="subtitle">Hola, soy</h2>
+            <h1 class="title">Hernan Perez</h1>
+            <h3 class="role">Unity Developer <span class="gradient-text">XR / AR / VR</span></h3>
+            <p class="hero-desc">Creando el futuro de las experiencias interactivas, simulaciones y juegos inmersivos.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn primary">Ver Proyectos</a>
+                <a href="CV/CV Hernan Perez.pdf" target="_blank" class="btn secondary">Descargar CV <i class="fa-solid fa-download"></i></a>
             </div>
-            <h1>HERNAN PEREZ</h1>
-            <h2>Unity Developer XR/AR/VR</h2>
-            <div class="redes">
-             <!--   <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>-->
-                <a href="https://www.linkedin.com/in/hernan-perez-h/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/watch?v=erqCYScjVJA"><i class="fa-brands fa-unity"></i></a>
-                <a href="https://hernanperez.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hernan-perez-h/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/watch?v=erqCYScjVJA" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://hernanperez.itch.io/" target="_blank" aria-label="Itch.io"><i class="fa-brands fa-itch-io"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual reveal right">
+            <div class="profile-card glass">
+                <img src="img/hp.jpg" alt="Hernan Perez">
             </div>
         </div>
     </section>
 
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p>Hola, soy <span>Hernan Perez</span> Desarrollador de Videojuegos en Unity con más de 8 años de experiencia, especializado en experiencias inmersivas, juegos educativos y simulaciones con tecnologías AR/VR/XR. Como instructor en desarrollo de videojuegos y entornos interactivos, he perfeccionado mis habilidades para comunicar conceptos complejos, liderar equipos y fomentar la creatividad. Apasionado por innovar y contribuir al crecimiento profesional en la industria.</p>
-            <p>Mi enfoque se centra en la creación de experiencias interactivas que no solo entretienen, sino que también educan y capacitan. Estoy comprometido con el aprendizaje continuo y la mejora de mis habilidades para enfrentar los desafíos tecnológicos del futuro.</p>
-            <a href="CV/CV Hernan Perez.pdf" download="CV_Hernan_Perez" style="text-decoration: none;">
-                <button>
-                    Descargar CV <i class="fa-solid fa-download"></i>
-                    <span class="overlay"></span>
-                </button>
-            </a>
-        </div>
-    </section>
-
-    <!-- SECCION SKILLS -->
-    <section class="skills" id="skills">
-        <div class="contenido-seccion">
-            <h2>Skills</h2>
-            <div class="fila">
-                <!-- Technical Skill -->
-                <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
-                        <span>Unity3D</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 90%;">
-                                <span>90%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>C# Programming</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 80%;">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>AR Development</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 70%;">
-                                <span>70%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>VR Development</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 80%;">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>3D Interaction Design</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 80%;">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title reveal">Sobre <span>Mí</span></h2>
+            <div class="about-grid">
+                <div class="about-text reveal left">
+                    <p>Desarrollador de Videojuegos en Unity con más de <strong>8 años de experiencia</strong>, especializado en experiencias inmersivas, juegos educativos y simulaciones con tecnologías <strong>AR / VR / XR</strong>.</p>
+                    <p>Como instructor en desarrollo de videojuegos y entornos interactivos, he perfeccionado mis habilidades para comunicar conceptos complejos, liderar equipos y fomentar la creatividad.</p>
+                    <p>Mi enfoque se centra en la creación de experiencias interactivas que no solo entretienen, sino que también <strong>educan y capacitan</strong>. Apasionado por la innovación tecnológica y el aprendizaje continuo.</p>
                 </div>
-                <!-- Professional Skills -->
-                <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
-                        <span>Comunicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso"style="width: 90%;">
-                                <span>90%</span>
-                            </div>
-                        </div>
+                <div class="about-stats reveal right">
+                    <div class="stat-card glass">
+                        <h3>8+</h3>
+                        <p>Años de Experiencia</p>
                     </div>
-                    <div class="skill">
-                        <span>Trabajo en Equipo</span>
-                        <div class="barra-skill">
-                            <div class="progreso"style="width: 85%;">
-                                <span>85%</span>
-                            </div>
-                        </div>
+                    <div class="stat-card glass">
+                        <h3>10+</h3>
+                        <p>Proyectos XR/VR</p>
                     </div>
-                    <div class="skill">
-                        <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso"style="width: 80%;">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 80%;">
-                                <span>85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso" style="width: 75%;">
-                                <span> 75%</span>
-                            </div>
-                        </div>
+                    <div class="stat-card glass">
+                        <h3>100%</h3>
+                        <p>Pasión por Crear</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCION CURRICULUM -->
-    <section id="curriculum" class="curriculum">
-        <div class="contenido-seccion">
-            <h2>Curriculum</h2>
-            <div class="fila">
-                <div class="col izquierda">
-                    <h3>Educación</h3>
-                    <div class="item izq">
-                        <h4>Desarrollo de Videojuegos</h4>
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2013 - 2015</span>
-                        <p>El tecnólogo en desarrollo de videojuegos y entornos interactivos está capacitado para
-                            generar el código que definirá el comportamiento de cada elemento del videojuego
-                            (personajes, objetos, interfaces gráficas de usuario etc.) y la interacción del videojuego con
-                            el jugador. También comprende de manera clara las fases de su diseño y todos sus
-                            componentes, como la experiencia de usuario, la usabilidad, la narrativa, etc. Incorpora los
-                            recursos audiovisuales, que le brindarán un orden lógico al proceso de producción,
-                            asegurando de manera efectiva el proyecto en toda su extensión.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title reveal">Mis <span>Habilidades</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category glass reveal left">
+                    <h3><i class="fa-solid fa-code"></i> Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Unity3D</span> <span>90%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
                     </div>
-                    <div class="item izq">
-                        <h4>Aplicación de la Metodología Scrum para Proyectos de Desarrollo de Software</h4>
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2019 - 2019</span>
-                        <p>Este programa de formación se orienta al conocimiento y aplicación de un marco de trabajo ágil
-                            para la gestión de proyectos SCRUM, siendo uno de los marcos de trabajo que se enmarca en el
-                            concepto de agilísmo para la gestión de proyectos de software que más se utiliza, mostrando
-                            excelentes resultados en las empresas en las que se ha implementado.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>C# Programming</span> <span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
                     </div>
-                    <div class="item izq">
-                        <h4>Creación de Aplicaciones con Realidad Aumentada</h4>
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2019 - 2019</span>
-                        <p>Creación de Aplicaciones con Realidad Aumentada, estará en la capacidad para asistir en la creación e implementación de experiencias interactivas en 3D mediante el uso de tecnologías de realidad aumentada, participando en el modelado y animación 3D, integración de objetos virtuales con entornos reales, y la programación básica de interacciones. Además, apoyará en pruebas de calidad, optimización de recursos, y documentación técnica, colaborando en equipos multidisciplinarios para desarrollar aplicaciones en sectores como videojuegos, educación, publicidad y simulaciones.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>AR Development</span> <span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>VR Development</span> <span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>3D Interaction Design</span> <span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
                     </div>
                 </div>
-
-                <div class="col derecha">
-                    <h3>Experiencia de trabajo</h3>
-                    <div class="item der">
-                        <h4>DESARROLLADOR DE VIDEOJUEGOS</h4>   
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2024 - 2024</span>
-                        <p>Desarrollo he implementación del simulador de manejo, digitalización y clasificación de documentos y archivos electrónico</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                <div class="skill-category glass reveal right">
+                    <h3><i class="fa-solid fa-users"></i> Professional Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Comunicación</span> <span>90%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
                     </div>
-                    <div class="item der">
-                        <h4>LÍDER TECH SELECU</h4>
-                        <span class="casa">Cosmo Schools </span>
-                        <span class="fecha">2023 - 2024</span>
-                        <p>• Dirigí la estrategia tecnológica y supervisé el desarrollo e implementación de soluciones 
-                            organizacionales. </p>
-                            <p>  • Lideré un equipo multidisciplinario para desarrollar productos y servicios digitales 
-                            innovadores.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Trabajo en Equipo</span> <span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
                     </div>
-                    <div class="item der">
-                        <h4>DESARROLLADOR DE VIDEOJUEGOS</h4>
-                        <span class="casa">Holss</span>
-                        <span class="fecha">2022 - 2023</span>
-                        <p>• Desarrollé y programé mecánicas interactivas para varios proyectos de videojuegos. </p>
-                        <p>• Colaboré con diseñadores y artistas para crear experiencias de juego inmersivas.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Creatividad</span> <span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
                     </div>
-                    <div class="item der">
-                        <h4>INSTRUCTOR EN DESARROLLO DE VIDEOJUEGOS Y ENTORNOS INTERACTIVOS</h4>
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2020 - 2023</span>
-                        <p>• Impartí técnicas de desarrollo de videojuegos y diseño de entornos interactivos a 
-                            estudiantes y profesionales. </p>
-                        <p>• Desarrollé y ofrecí programas de formación completos centrados en herramientas y 
-                            prácticas estándares de la industria. </p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Dedicación</span> <span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
                     </div>
-                    
-                    <div class="item der">
-                        <h4>lIDER DE DESARROLLO TECNOLOGICO</h4>
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2019 - 2019</span>
-                        <p>• Lideré el desarrollo de simuladores y aplicaciones para el Centro de Comercio. </p>
-                        <p>• • Trabajé de cerca con los instructores para alinear las soluciones tecnológicas con los 
-                            objetivos dela institución y los programas de formación. </p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>APOYO TECNOLOGICO</h4>
-                        <span class="casa">Servicio Nacional de Aprendizaje (SENA)</span>
-                        <span class="fecha">2018 - 2018</span>
-                        <p>• Apoyé en el desarrollo de simuladores y aplicaciones para fines de formación. </p>
-                        <p>• Asistí en el mantenimiento y mejora de soluciones de software existentes. </p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Project Management</span> <span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--portafolio de imagenes en la primera ventana-->
-
-    <!-- Sección Portfolio (versión resumida) -->
-<section id="portfolio" class="portfolio">
-    <div class="contenido-seccion">
-        <h2>PORTFOLIO</h2>
-        
-        <!-- Proyectos destacados (muestra solo los principales) -->
-        <div class="proyectos-resumen">
-            <!-- Laboratorio financiero contable -->
-            <div class="proyecto-miniatura" id="primer-proyecto">
-                <img src="img/interactive.png" alt="Laboratorio financiero contable">
-                <div class="info-miniatura">
-                    <h3>Laboratorio financiero contable</h3>
-                    <button class="btn-ver-detalles" data-proyecto="Laboratorio financiero contable">Ver detalles</button>
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title reveal">Trayectoria <span>Profesional</span></h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">2024</span>
+                        <h3>Desarrollador de Videojuegos</h3>
+                        <h4>SENA</h4>
+                        <p>Desarrollo e implementación del simulador de manejo, digitalización y clasificación de documentos y archivos electrónicos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">2023 - 2024</span>
+                        <h3>Líder Tech Selecu</h3>
+                        <h4>Cosmo Schools</h4>
+                        <p>Dirigí la estrategia tecnológica y lideré un equipo multidisciplinario para desarrollar productos y servicios digitales innovadores.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">2022 - 2023</span>
+                        <h3>Desarrollador de Videojuegos</h3>
+                        <h4>Holss</h4>
+                        <p>Desarrollé y programé mecánicas interactivas, colaborando con diseñadores para crear experiencias inmersivas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">2020 - 2023</span>
+                        <h3>Instructor VR / Entornos Interactivos</h3>
+                        <h4>SENA</h4>
+                        <p>Impartí técnicas de desarrollo de videojuegos y diseño de entornos interactivos a estudiantes y profesionales.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="date">2013 - 2019</span>
+                        <h3>Formación & Inicios</h3>
+                        <h4>SENA</h4>
+                        <p>Líder de desarrollo tecnológico, Tecnólogo en Desarrollo de Videojuegos, Certificaciones en Scrum y Realidad Aumentada.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Proyectos <span>Destacados</span></h2>
             
-            <!-- proyecto-corona-training-->
-            <div class="proyecto-miniatura">
-                <img src="img/corona.png" alt="proyecto-corona-training">
-                <div class="info-miniatura">
-                    <h3>Corona Training</h3>
-                    <button class="btn-ver-detalles" data-proyecto="proyecto-corona-training">Ver detalles</button>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-1')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/interactive.png" alt="Lab Financiero">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Laboratorio Financiero</h3>
+                        <p>Simulador empresarial BPO/KPO.</p>
+                        <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span></div>
+                    </div>
                 </div>
-            </div>
-             <!-- electrico -->
-             <div class="proyecto-miniatura">
-                <img src="img/electrico.png" alt="electrico">
-                <div class="info-miniatura">
-                    <h3>Mantenimiento de lineas de alta tensión</h3>
-                    <button class="btn-ver-detalles" data-proyecto="electrico">Ver detalles</button>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-2')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/corona.png" alt="Corona Training">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Corona Training</h3>
+                        <p>Entrenamiento VR industrial.</p>
+                        <div class="tags"><span class="tag">VR</span><span class="tag">Training</span></div>
+                    </div>
                 </div>
-            </div>
-             <!-- gestion-->
-             <div class="proyecto-miniatura">
-                <img src="img/archie-01.png" alt="gestion">
-                <div class="info-miniatura">
-                    <h3>Simulador Gestion de Archivos</h3>
-                    <button class="btn-ver-detalles" data-proyecto="gestion">Ver detalles</button>
-                </div>
-            </div>
-             <!-- pintura-->
-             <div class="proyecto-miniatura">
-                <img src="img/pintura.png" alt="pintura">
-                <div class="info-miniatura">
-                    <h3>VR Painting simulator</h3>
-                    <button class="btn-ver-detalles" data-proyecto="pintura">Ver detalles</button>
-                </div>
-            </div>
-             <!-- selecu -->
-             <div class="proyecto-miniatura">
-                <img src="img/seluverso3.jpg" alt="selecu">
-                <div class="info-miniatura">
-                    <h3>Seluverso</h3>
-                    <button class="btn-ver-detalles" data-proyecto="selecu">Ver detalles</button>
-                </div>
-            </div>
-             <!-- comfama-->
-             <div class="proyecto-miniatura">
-                <img src="img/comfama.jpg" alt="comfama">
-                <div class="info-miniatura">
-                    <h3>Juegos Comfama</h3>
-                    <button class="btn-ver-detalles" data-proyecto="comfama">Ver detalles</button>
-                </div>
-            </div>
-             <!-- veloz -->
-             <div class="proyecto-miniatura">
-                <img src="img/port_veloz.png" alt="veloz">
-                <div class="info-miniatura">
-                    <h3>VelozMente</h3>
-                    <button class="btn-ver-detalles" data-proyecto="veloz">Ver detalles</button>
-                </div>
-            </div>
-                 <!-- aima -->
-            <div class="proyecto-miniatura">
-                <img src="img/aima.png" alt="aima">
-                <div class="info-miniatura">
-                    <h3>Aima</h3>
-                    <button class="btn-ver-detalles" data-proyecto="aima">Ver detalles</button>
-                </div>
-            </div>
 
-                <!-- tesoro -->
-                <div class="proyecto-miniatura">
-                    <img src="img/tesoro.jpg" alt="tesoro">
-                    <div class="info-miniatura">
+                <!-- Project 3 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-3')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/electrico.png" alt="Mantenimiento">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mantenimiento Alta Tensión</h3>
+                        <p>Simulador VR para sector eléctrico.</p>
+                        <div class="tags"><span class="tag">VR</span><span class="tag">Unity</span></div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-4')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/archie-01.png" alt="Gestión Documental">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Simulador Gestión Documental</h3>
+                        <p>Entorno interactivo para educación.</p>
+                        <div class="tags"><span class="tag">Educación</span><span class="tag">UI/UX</span></div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-5')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/pintura.png" alt="Pintura Industrial">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Simulador Pintura Industrial</h3>
+                        <p>Entrenamiento de habilidades VR.</p>
+                        <div class="tags"><span class="tag">VR</span><span class="tag">Industrial</span></div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-6')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/seluverso3.jpg" alt="Seluverso">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Seluverso</h3>
+                        <p>Plataforma de consolidación de aprendizaje.</p>
+                        <div class="tags"><span class="tag">Gamification</span><span class="tag">Educación</span></div>
+                    </div>
+                </div>
+                <!-- Project 7 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-7')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/comfama.jpg" alt="Juegos Comfama">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Juegos Comfama</h3>
+                        <p>Juego point and click con narrativa épica.</p>
+                        <div class="tags"><span class="tag">Móvil</span><span class="tag">Educación</span></div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-8')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/port_veloz.png" alt="VelozMente">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>VelozMente</h3>
+                        <p>Desafío matemático y de comprensión lectora.</p>
+                        <div class="tags"><span class="tag">Gamification</span><span class="tag">Game Design</span></div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-9')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/aima.png" alt="Aima">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Aima</h3>
+                        <p>Narrativa sobre una humanidad desolada.</p>
+                        <div class="tags"><span class="tag">Narrativa</span><span class="tag">UI/UX</span></div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-10')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/tesoro.jpg" alt="Buscando el Tesoro">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
                         <h3>Buscando el Tesoro</h3>
-                        <button class="btn-ver-detalles" data-proyecto="tesoro">Ver detalles</button>
+                        <p>Evaluación innovadora y dinámica.</p>
+                        <div class="tags"><span class="tag">Educación</span><span class="tag">Game Design</span></div>
                     </div>
                 </div>
 
-                 <!-- Archie2 -->
-                 <div class="proyecto-miniatura">
-                    <img src="img/archie2.jpg" alt="archie2">
-                    <div class="info-miniatura">
-                        <h3>Simulador de Espedientes y Archivos Electronicos</h3>
-                        <button class="btn-ver-detalles" data-proyecto="archie2">Ver detalles</button>
+                <!-- Project 11 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-11')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/archie2.jpg" alt="Simulador Gestión Documental 2">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Simulador Gestión Documental</h3>
+                        <p>Tramite de documentos y creación de expedientes.</p>
+                        <div class="tags"><span class="tag">Educación</span><span class="tag">Simulación</span></div>
                     </div>
                 </div>
 
-                 <!-- senabank -->
-                 <div class="proyecto-miniatura">
-                    <img src="img/BANCO SENA-01-01.png" alt="senabank">
-                    <div class="info-miniatura">
-                        <h3>Producto Tecnopedagogico</h3>
-                        <button class="btn-ver-detalles" data-proyecto="senabank">Ver detalles</button>
+                <!-- Project 12 -->
+                <div class="project-card glass reveal" onclick="openModal('modal-12')">
+                    <div class="project-media">
+                        <img loading="lazy" src="img/BANCO SENA-01-01.png" alt="Sena Bank">
+                        <div class="play-indicator"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sena Bank</h3>
+                        <p>Producto tecnopedagógico de entrenamiento.</p>
+                        <div class="tags"><span class="tag">VR</span><span class="tag">Entrenamiento</span></div>
                     </div>
                 </div>
-
-         </div>
-         <!-- Botón para ver todos -->
-        <button id="btn-ver-todos" class="btn-destacado">
-            <i class="fas fa-th"></i> Ver todos los proyectos
-        </button>
-    </div>
-
-        
-        
-</section>
-<!-- Sección oculta con todos los proyectos (aparece al hacer clic) -->
-<section id="todos-proyectos" class="todos-proyectos" style="display: none;">
-    <div class="contenido-seccion">
-        <h2>TODOS MIS PROYECTOS</h2>
-        <button id="btn-cerrar-proyectos" class="btn-cerrar">
-            <i class="fas fa-times"></i> Cerrar
-        </button>
-        
-        <!-- Contenedor de proyectos completos -->
-        <div class="contenedor-proyectos-completos">
-            <!-- Laboratorio financiero contable -->
-            <div id="laboratorio-financiero-contable" class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/financiero.mp4" type="video/mp4">
-                        <img src="img/interactive.png" alt="Laboratorio financiero contable">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Laboratorio financiero contable</h3>
-                            <p>Formación con énfasis en procesos BPO y KPO mediante acciones en ambientes simulados.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="descripcion-destacada">
-                    <h3>Laboratorio financiero contable</h3>
-                    <p class="tagline">Formación con énfasis en procesos BPO y KPO mediante acciones en ambientes simulados.</p>
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>Fortalece la preparación de los aprendices brindándoles una experiencia cercana a la realidad empresarial.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>Fomenta la toma de decisiones en un ambiente controlado que recrea condiciones reales empresariales.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p>Aprende a cumplir objetivos dentro de un entorno gamificado diseñado para educación.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para disfrutarse solo o en grupo, ideal para aulas o instructores.</p>
-                        </div>
-                    </div>
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                        <span class="tech-tag">Game Design</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- proyecto-corona-training -->
-            <div id="proyecto-corona-training" class="proyecto-destacado">
-                <!-- ... Todo el contenido detallado de VelozMente ... -->
-                <div class="proyecto-destacado">
-                    <div class="contenedor-video-destacado">
-                        <!-- Video en lugar de imagen -->
-                        <video autoplay muted loop playsinline>
-                            <source src="Videos/corona.mp4" type="video/mp4">
-                            <!-- Fallback por si el video no carga -->
-                            <img src="img/corona.png" alt="proyecto-corona-training">
-                        </video>
-                        <div class="overlay-destacado">
-                            <div class="info-destacado">
-                                <h3>Corona Training</h3>
-                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                                    simulados. </p>
-                            </div>
-                            <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                    <i class="fab fa-itch-io"></i> Jugar ahora
-                                </a> 
-                            </div> -->
-                        </div> 
-                    </div>
-                    
-                    <div class="descripcion-destacada">
-                        <h3>Corona Training</h3>
-                        <p class="tagline">Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                            simulados.</p>
-                        
-                        <div class="caracteristicas-grid">
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-brain"></i>
-                                <h4>Ejercicio cognitivo</h4>
-                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                                    simulados con toma de decisiones basados en casos reales.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>Decide ahora</h4>
-                                <p>Fomenta la toma de decisiones correctas en un ambiente industrial
-                                    controlado que permita recrear las condiciones reales en el entorno empresarial.
-                                </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-gamepad"></i>
-                                <h4>Más que un juego</h4>
-                                <p>Aprende a cumplir objetivos dentro de un entorno gamificado diseñado para educación y entrenamiento.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-users"></i>
-                                <h4>Individual o grupal</h4>
-                                <p>Diseñado para disfrutarse solo o en compañia de instructores, perfecto para aulas de entrenamiento.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="tecnologias">
-                            <span>Tecnologías:</span>
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">VR</span>
-                            <span class="tech-tag">UI/UX</span>
-                            <span class="tech-tag">Game Design</span>
-                            <span class="tech-tag">Training</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-             <!-- electrico -->
-             <div id="electrico" class="proyecto-destacado">
-                <!-- ... Todo el contenido detallado de VelozMente ... -->
-                <div class="proyecto-destacado">
-                    <div class="contenedor-video-destacado">
-                        <!-- Video en lugar de imagen -->
-                        <video autoplay muted loop playsinline>
-                            <source src="Videos/electrico.mp4" type="video/mp4">
-                            <!-- Fallback por si el video no carga -->
-                            <img src="img/electrico.png" alt="electrico">
-                        </video>
-                        <div class="overlay-destacado">
-                            <div class="info-destacado">
-                                <h3>Corona Training</h3>
-                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                                    simulados. </p>
-                            </div>
-                            <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                    <i class="fab fa-itch-io"></i> Jugar ahora
-                                </a> 
-                            </div> -->
-                        </div> 
-                    </div>
-                    
-                    <div class="descripcion-destacada">
-                        <h3>Corona Training</h3>
-                        <p class="tagline">Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                            simulados.</p>
-                        
-                        <div class="caracteristicas-grid">
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-brain"></i>
-                                <h4>Ejercicio cognitivo</h4>
-                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                                    simulados con toma de decisiones basados en casos reales.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>Decide ahora</h4>
-                                <p>Fomenta la toma de decisiones correctas en un ambiente industrial
-                                    controlado que permita recrear las condiciones reales en el entorno empresarial.
-                                </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-gamepad"></i>
-                                <h4>Más que un juego</h4>
-                                <p>Aprende a cumplir objetivos dentro de un entorno gamificado diseñado para educación y Entrenamiento industrial.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-users"></i>
-                                <h4>Individual o grupal</h4>
-                                <p>Diseñado para disfrutarse solo o en compañia de instructores, perfecto para aulas de entrenamiento.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="tecnologias">
-                            <span>Tecnologías:</span>
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">VR</span>
-                            <span class="tech-tag">UI/UX</span>
-                            <span class="tech-tag">Game Design</span>
-                            <span class="tech-tag">Training</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- gestion -->
-            <div id="gestion" class="proyecto-destacado">
-                <!-- ... Todo el contenido detallado de VelozMente ... -->
-                <div class="proyecto-destacado">
-                    <div class="contenedor-video-destacado">
-                        <!-- Video en lugar de imagen -->
-                        <video autoplay muted loop playsinline>
-                            <source src="Videos/archie1.mp4" type="video/mp4">
-                            <!-- Fallback por si el video no carga -->
-                            <img src="img/archie-01.png" alt="gestion">
-                        </video>
-                        <div class="overlay-destacado">
-                            <div class="info-destacado">
-                                <h3>Simulador de Gestión Documental </h3>
-                                <p>producción, gestión y tramite de documentos en entornos electrónicos. </p>
-                            </div>
-                            <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                    <i class="fab fa-itch-io"></i> Jugar ahora
-                                </a> 
-                            </div> -->
-                        </div> 
-                    </div>
-                    
-                    <div class="descripcion-destacada">
-                        <h3>Simulador de Gestión Documental</h3>
-                        <p class="tagline">producción, gestión y tramite de documentos en entornos electrónicos.</p>
-                        
-                        <div class="caracteristicas-grid">
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-brain"></i>
-                                <h4>Ejercicio cognitivo</h4>
-                                <p>aplicación para el entorno educativo mediante Simulador Interactivo
-                                virtual, que permita a los aprendices estar inmersos en un entorno sociocultural virtual.
-                                    </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>Decide ahora</h4>
-                                <p>
-                                   Disminuye la brecha entre la teoría académica y la práctica laboral ya que acerca al
-                                    aprendiz a su futura realidad como trabajador. </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-gamepad"></i>
-                                <h4>Más que un juego</h4>
-                                <p>Reduce riesgos y costos ya que el aprendiz mediante la practica en un simulador puede
-                                    realizar actividades que de ejecutarse en la realidad ese error puede ser fatal o costoso
-                                    para la empresa.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-users"></i>
-                                <h4>Individual o grupal</h4>
-                                <p>Diseñado para disfrutarse solo o en compañia de instructores, perfecto para aulas de entrenamiento.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="tecnologias">
-                            <span>Tecnologías:</span>
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">UI/UX</span>
-                            <span class="tech-tag">Game Design</span>
-                            <span class="tech-tag">Educación</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!-- pintura-->
-             <div id="pintura" class="proyecto-destacado">
-                <!-- ... Todo el contenido detallado de VelozMente ... -->
-                <div class="proyecto-destacado">
-                    <div class="contenedor-video-destacado">
-                        <!-- Video en lugar de imagen -->
-                        <video autoplay muted loop playsinline>
-                            <source src="Videos/pintura.mp4" type="video/mp4">
-                            <!-- Fallback por si el video no carga -->
-                            <img src="img/pintura.png" alt="pintura">
-                        </video>
-                        <div class="overlay-destacado">
-                            <div class="info-destacado">
-                                <h3>Simulador de Pintura Industrial </h3>
-                                <p>Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                                    simulados. </p>
-                            </div>
-                            <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                    <i class="fab fa-itch-io"></i> Jugar ahora
-                                </a> 
-                            </div> -->
-                        </div> 
-                    </div>
-                    
-                    <div class="descripcion-destacada">
-                        <h3>Simulador de Pintura Industrial</h3>
-                        <p class="tagline">Entrenamiento de habilidades blandas y técnicas para el sector industrial en ambientes
-                            simulados.</p>
-                        
-                        <div class="caracteristicas-grid">
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-brain"></i>
-                                <h4>Ejercicio cognitivo</h4>
-                                <p>aplicación para el entorno industrial mediante Simulador Interactivo virtual, que permita a los estudiantes fortalecer sus habilidades en el área de pintura industrial.</p>
-                                   
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>Decide ahora</h4>
-                                <p>
-                                   Disminuye la brecha entre la teoría académica y la práctica laboral ya que acerca al
-                                    aprendiz a su futura realidad como trabajador. </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-gamepad"></i>
-                                <h4>Más que un juego</h4>
-                                <p>Reduce riesgos y costos ya que el aprendiz mediante la practica en un simulador puede
-                                    realizar actividades que de ejecutarse en la realidad ese error puede ser fatal o costoso
-                                    para la empresa.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-users"></i>
-                                <h4>Individual o grupal</h4>
-                                <p>Diseñado para disfrutarse solo o en compañia de instructores, perfecto para aulas de entrenamiento.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="tecnologias">
-                            <span>Tecnologías:</span>
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">VR</span>
-                            <span class="tech-tag">UI/UX</span>
-                            <span class="tech-tag">Game Design</span>
-                            <span class="tech-tag">Educación</span>
-                            <span class="tech-tag">Training</span>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- selecu -->
-            <div id="selecu" class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/seluverso.mp4" type="video/mp4">
-                        <img src="img/seluverso3.jpg" alt="Seluverso">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Seluverso</h3>
-                            <p>Sistema de consolidación del aprendizaje donde los datos evidencian el progreso de los usuarios, permitiendo decisiones para fortalecerlo.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="descripcion-destacada">
-                    <h3>Seluverso</h3>
-                    <p class="tagline">Sistema de consolidación del aprendizaje donde los datos evidencian el progreso de los usuarios, permitiendo decisiones para fortalecerlo.</p>
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>Reta la agilidad mental para resolver retos matemáticos y de comprensión lectora.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>Fomenta la toma de decisiones y análisis en un ambiente gamificado.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p>Favorece habilidades mentales necesarias para ámbitos escolares y cotidianos.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para disfrutarse solo o en compañía, ideal para aulas.</p>
-                        </div>
-                    </div>
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                        <span class="tech-tag">Game Design</span>
-                        <span class="tech-tag">Educación</span>
-                    </div>
-                </div>
-            </div>
-            <!-- comfama -->
-            <div id="comfama" class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/prueba.mp4" type="video/mp4">
-                        <img src="img/comfama.jpg" alt="Juegos Comfama">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Juegos Comfama</h3>
-                            <p>Juego point and click que te llevará a una inolvidable narrativa épica, mientras descubres y aprendes los hábitos de vida saludable creados por Comfama, los cuales pueden mejorar significativamente tu cotidianidad.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="descripcion-destacada">
-                    <h3>Juegos Comfama</h3>
-                    <p class="tagline">Juego point and click que te llevará a una inolvidable narrativa épica, mientras descubres y aprendes los hábitos de vida saludable creados por Comfama.</p>
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>Reta la agilidad mental para resolver retos de atención al detalle.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>Fomenta la emocionante búsqueda de tesoros ocultos en un ambiente de recompensa y gamificación.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p>Genera una opción de entretenimiento y aprendizaje en un contexto de ocio consciente.</p>
-                        </div>
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para disfrutarse solo o en compañía, perfecto para aprender los hábitos de vida saludable creados por Comfama.</p>
-                        </div>
-                    </div>
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                        <span class="tech-tag">Móvil</span>
-                        <span class="tech-tag">Game Design</span>
-                        <span class="tech-tag">Educación</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- veloz-->
-         <div id="veloz" class="proyecto-destacado">
-            <!-- ... Todo el contenido detallado de VelozMente ... -->
-            <div class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <!-- Video en lugar de imagen -->
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/veloz.mp4" type="video/mp4">
-                        <!-- Fallback por si el video no carga -->
-                        <img src="img/port_veloz.png" alt="veloz">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>VelozMente</h3>
-                            <p> El desafío de resolver rápidamente las operaciones matemáticas y los retos de comprensión lectora para derrotar a un alienígena, un dragón o un kraken, pondrán a prueba las habilidades de todos los participantes.</p>
-                        </div>
-                        <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                <i class="fab fa-itch-io"></i> Jugar ahora
-                            </a> 
-                        </div> -->
-                    </div> 
-                </div>
-                
-                <div class="descripcion-destacada">
-                    <h3>VelozMente</h3>
-                    <p class="tagline"> El desafío de resolver rápidamente las operaciones matemáticas y los retos de comprensión lectora para derrotar a un alienígena, un dragón o un kraken, pondrán a prueba las habilidades de todos los participantes.</p>
-                    
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>Reta la agilidad mental para resolver retos matemáticos y de comprensión lectora.</p>
-                               
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>
-                                Fomenta la toma de decisiones rápida en un ambiente de recompensa y gamificación. </p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p>Fortalece el sentido de lateralidad, fundamentales en los primeros años de desarrollo.</p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para disfrutarse solo o en compañia.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                       
-                        <span class="tech-tag">Game Design</span>
-                        <span class="tech-tag">Educación</span>
-                      
-                        
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!-- Aima -->
-            <div id="aima" class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <!-- Video en lugar de imagen -->
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/aima.mp4" type="video/mp4">
-                        <!-- Fallback por si el video no carga -->
-                        <img src="img/aima.png" alt="aima">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Aima</h3>
-                            <p> producto en colaboración con estudiantes de la Universidad EAFIT para narrar la historia de una humanidad desolada.</p>
-                        </div>
-                        <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                <i class="fab fa-itch-io"></i> Jugar ahora
-                            </a> 
-                        </div> -->
-                    </div> 
-                </div>
-                
-                <div class="descripcion-destacada">
-                    <h3>Aima</h3>
-                    <p class="tagline"> producto en colaboración con estudiantes de la Universidad EAFIT para narrar la historia de una humanidad desolada.</p>
-                    
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>Reta la agilidad mental para resolver retos matemáticos, de atencion al detalle y de comprensión lectora.</p>
-                               
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>
-                                Fomenta la toma de decisiones rápida en un ambiente de recompensa y gamificación. </p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p>Con este espacio demostramos que aprender sobre cualquier temática no tiene por qué ser aburrido.</p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para disfrutarse solo o en compañia.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                        <span class="tech-tag">narrativa</span>
-                        <span class="tech-tag">Game Design</span>
-                        <span class="tech-tag">Educación</span>
-                      
-                        
-                    </div>
-                </div>
-            </div>
-        
-         <!-- tesoro-->
-        <div id="tesoro" class="proyecto-destacado">
-            <!-- ... Todo el contenido detallado de VelozMente ... -->
-            <div class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <!-- Video en lugar de imagen -->
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/tesoro.mp4" type="video/mp4">
-                        <!-- Fallback por si el video no carga -->
-                        <img src="img/aima.png" alt="tesoro">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Buscando el Tesoro</h3>
-                            <p> Un maravilloso viaje por las islas del conocimiento.</p>
-                        </div>
-                        <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                <i class="fab fa-itch-io"></i> Jugar ahora
-                            </a> 
-                        </div> -->
-                    </div> 
-                </div>
-                
-                <div class="descripcion-destacada">
-                    <h3>Buscando el Tesoro</h3>
-                    <p class="tagline"> Un maravilloso viaje por las islas del conocimiento.</p>
-                    
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>propone un sistema innovador de evaluación en el que se eliminan los métodos tradicionales de consolidación del aprendizaje y da paso a una experiencia motivadora y dinámica de medición.</p>
-                               
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>
-                                pone a prueba lo aprendido por los estudiantes en las clases de matemáticas, lenguaje, ciencias naturales, competencias ciudadanas e inglés. </p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p> propone un sistema innovador de evaluación en el que se eliminan los métodos tradicionales de consolidación del aprendizaje y da paso a una experiencia motivadora y dinámica de medición.</p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para evaluar conocimientos previos.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                        <span class="tech-tag">narrativa</span>
-                        <span class="tech-tag">Game Design</span>
-                        <span class="tech-tag">Educación</span>
-                      
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-         <!-- Archie2-->
-         <div id="archie2" class="proyecto-destacado">
-            <!-- ... Todo el contenido detallado de VelozMente ... -->
-            <div class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <!-- Video en lugar de imagen -->
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/archie2.mp4" type="video/mp4">
-                        <!-- Fallback por si el video no carga -->
-                        <img src="img/archie2.jpg" alt="archie2">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Simulador de Gestión Documental</h3>
-                            <p> producción, gestión, tramite de documentos y creación de expedientes en entornos electrónicos.</p>
-                        </div>
-                        <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                <i class="fab fa-itch-io"></i> Jugar ahora
-                            </a> 
-                        </div> -->
-                    </div> 
-                </div>
-                
-                <div class="descripcion-destacada">
-                    <h3>Simulador de Gestión Documental</h3>
-                    <p class="tagline"> producción, gestión, tramite de documentos y creación de expedientes en entornos electrónicos.</p>
-                    
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                                <p>aplicación para el entorno educativo mediante Simulador Interactivo
-                                virtual, que permita a los aprendices estar inmersos en un entorno sociocultural virtual.
-                                    </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>Decide ahora</h4>
-                                <p>
-                                   Disminuye la brecha entre la teoría académica y la práctica laboral ya que acerca al
-                                    aprendiz a su futura realidad como trabajador. </p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-gamepad"></i>
-                                <h4>Más que un juego</h4>
-                                <p>Reduce riesgos y costos ya que el aprendiz mediante la practica en un simulador puede
-                                    realizar actividades que de ejecutarse en la realidad ese error puede ser fatal o costoso
-                                    para la empresa.</p>
-                            </div>
-                            
-                            <div class="caracteristica-item">
-                                <i class="fa-solid fa-users"></i>
-                                <h4>Individual o grupal</h4>
-                                <p>Diseñado para disfrutarse solo o en compañia de instructores, perfecto para aulas de entrenamiento.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="tecnologias">
-                            <span>Tecnologías:</span>
-                            <span class="tech-tag">Unity</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">UI/UX</span>
-                            <span class="tech-tag">Game Design</span>
-                            <span class="tech-tag">Educación</span>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <!-- senabank -->
-        <div id="senabank" class="proyecto-destacado">
-            <!-- ... Todo el contenido detallado de VelozMente ... -->
-            <div class="proyecto-destacado">
-                <div class="contenedor-video-destacado">
-                    <!-- Video en lugar de imagen -->
-                    <video autoplay muted loop playsinline>
-                        <source src="Videos/Living Lab.mp4" type="video/mp4">
-                        <!-- Fallback por si el video no carga -->
-                        <img src="img/BANCO SENA-01-01.png" alt="senabank">
-                    </video>
-                    <div class="overlay-destacado">
-                        <div class="info-destacado">
-                            <h3>Sena Bank</h3>
-                            <p> Producto Tecnopedagogico de entrenamiento.</p>
-                        </div>
-                        <!-- <a href="https://hernanperez.itch.io/velozmente" target="_blank" class="btn-destacado">
-                                <i class="fab fa-itch-io"></i> Jugar ahora
-                            </a> 
-                        </div> -->
-                    </div> 
-                </div>
-                
-                <div class="descripcion-destacada">
-                    <h3>Sena Bank</h3>
-                    <p class="tagline"> Producto Tecnopedagogico de entrenamiento.</p>
-                    
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-brain"></i>
-                            <h4>Ejercicio cognitivo</h4>
-                            <p>propone un sistema innovador de evaluación en el que se eliminan los métodos tradicionales de consolidación del aprendizaje y da paso a una experiencia motivadora y dinámica.</p>
-                               
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-clock"></i>
-                            <h4>Decide ahora</h4>
-                            <p>
-                                pone a prueba lo aprendido por los estudiantes en las clases de Tecnologia en Gestión Bancaria y Entidades Financieras. </p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h4>Más que un juego</h4>
-                            <p> propone un sistema innovador de evaluación en el que se eliminan los métodos tradicionales de consolidación del aprendizaje y da paso a una experiencia motivadora y dinámica.</p>
-                        </div>
-                        
-                        <div class="caracteristica-item">
-                            <i class="fa-solid fa-users"></i>
-                            <h4>Individual o grupal</h4>
-                            <p>Diseñado para evaluar conocimientos previos.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="tecnologias">
-                        <span>Tecnologías:</span>
-                        <span class="tech-tag">Unity</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">UI/UX</span>
-                        <span class="tech-tag">VR</span>
-                        <span class="tech-tag">narrativa</span>
-                        <span class="tech-tag">Game Design</span>
-                        <span class="tech-tag">Educación</span>
-                      
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- fin de los proyectos destacados -->
- 
-    </div>
-</section>
-
-    <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <p>Si deseas saber más sobre mí o mis proyectos, no dudes en contactarme.</p>
-                    <button id="enviarMensaje" onclick="window.open('https://www.linkedin.com/in/hernan-perez-h/', '_blank')">
-                        Contáctame en LinkedIn <i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
-                
             </div>
         </div>
     </section>
 
-  
+    <!-- Project Modals Container -->
+    <div id="modal-container" class="modal-container">
+        <!-- Modals will be dynamically populated by JS to keep HTML clean -->
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Contact / Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container reveal">
+            <h2>¿Listo para crear algo increíble?</h2>
+            <p>Hablemos sobre tu próximo proyecto XR, simulador o videojuego.</p>
+            <a href="https://www.linkedin.com/in/hernan-perez-h/" target="_blank" class="btn primary btn-large">Contactar en LinkedIn <i class="fa-solid fa-arrow-right"></i></a>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hernan Perez. Todos los derechos reservados.</p>
+                <div class="footer-socials">
+                    <a href="https://hernanperez.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                    <a href="https://www.youtube.com/watch?v=erqCYScjVJA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script_v2.js"></script>
 </body>
 </html>

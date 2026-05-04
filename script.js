@@ -1,36 +1,42 @@
 let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
+
+// Función que oculta o muestra el menu
+function mostrarOcultarMenu() {
+    if (menuVisible) {
+        document.getElementById("nav").classList = "";
         menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
+    } else {
+        document.getElementById("nav").classList = "responsive";
         menuVisible = true;
     }
 }
 
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
+function seleccionar() {
+    // oculto el menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
+
+// Funcion que aplica las animaciones de las habilidades
+function efectoHabilidades() {
     var skills = document.getElementById("skills");
+    if (!skills) return;
+    
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
+    if (distancia_skills >= 300) {
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("Unity3D");
-        habilidades[1].classList.add("C# Programming");
-        habilidades[2].classList.add("AR Development");
-        habilidades[3].classList.add("VR Development");
-        habilidades[4].classList.add("3D Interaction Design");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        if(habilidades.length >= 10) {
+            habilidades[0].classList.add("skill-unity");
+            habilidades[1].classList.add("skill-csharp");
+            habilidades[2].classList.add("skill-ar");
+            habilidades[3].classList.add("skill-vr");
+            habilidades[4].classList.add("skill-3ddesign");
+            habilidades[5].classList.add("skill-comunicacion");
+            habilidades[6].classList.add("skill-trabajo");
+            habilidades[7].classList.add("skill-creatividad");
+            habilidades[8].classList.add("skill-dedicacion");
+            habilidades[9].classList.add("skill-proyect");
+        }
     }
 }
 
@@ -67,71 +73,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const btnDestacado = document.querySelector('.btn-destacado');
-if (btnDestacado) {
-    btnDestacado.style.position = 'relative'; // Asegúrate de que no esté siendo reposicionado
-}
-});
+    if (btnDestacado) {
+        btnDestacado.style.position = 'relative'; 
+    }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Botón "Ver todos"
+    // Modal de proyectos
     const btnVerTodos = document.getElementById('btn-ver-todos');
     const seccionProyectos = document.getElementById('todos-proyectos');
-    
-    btnVerTodos.addEventListener('click', function() {
-        seccionProyectos.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Evita scroll en el fondo
-    });
-    
-    // Botón "Cerrar"
     const btnCerrar = document.getElementById('btn-cerrar-proyectos');
-    btnCerrar.addEventListener('click', function() {
-        seccionProyectos.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
     
-   // Botones "Ver detalles" individuales
-   const botonesDetalles = document.querySelectorAll('.btn-ver-detalles');
-   botonesDetalles.forEach(boton => {
-       boton.addEventListener('click', function() {
-           const proyectoId = this.getAttribute('data-proyecto');
-           seccionProyectos.style.display = 'block';
-           document.body.style.overflow = 'hidden';
-           
-           // Scroll al proyecto específico
-           const proyectoCompleto = document.getElementById(proyectoId);
-           if (proyectoCompleto) {
-               proyectoCompleto.scrollIntoView({ behavior: 'smooth' });
-           }
-           proyectoCompleto.scrollIntoView({ behavior: 'smooth' });
-       });
-   });
-
-   ocument.addEventListener('DOMContentLoaded', function() {
-    const btnVerTodos = document.getElementById('btn-ver-todos');
-    const btnCerrar = document.getElementById('btn-cerrar-proyectos');
-    const seccionProyectos = document.getElementById('todos-proyectos');
+    if (btnVerTodos && seccionProyectos) {
+        btnVerTodos.addEventListener('click', function() {
+            seccionProyectos.classList.add('visible'); // Usar clase para animación
+            document.body.style.overflow = 'hidden'; // Evita scroll en el fondo
+            window.scrollTo(0, 0); // Scroll al inicio
+        });
+    }
     
-    btnVerTodos.addEventListener('click', function() {
-        seccionProyectos.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        window.scrollTo(0, 0); // Scroll al inicio
-    });
+    if (btnCerrar && seccionProyectos) {
+        btnCerrar.addEventListener('click', function() {
+            seccionProyectos.classList.remove('visible');
+            document.body.style.overflow = 'auto';
+        });
+    }
     
-    btnCerrar.addEventListener('click', function() {
-        seccionProyectos.style.display = 'none';
-        document.body.style.overflow = 'auto';
+    // Botones "Ver detalles" individuales
+    const botonesDetalles = document.querySelectorAll('.btn-ver-detalles');
+    botonesDetalles.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const proyectoId = this.getAttribute('data-proyecto');
+            if(seccionProyectos) {
+                seccionProyectos.classList.add('visible');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Scroll al proyecto específico
+            const proyectoCompleto = document.getElementById(proyectoId);
+            if (proyectoCompleto) {
+                setTimeout(() => {
+                    proyectoCompleto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300); // Pequeño delay para que el modal termine de abrirse
+            }
+        });
     });
 });
 
-
-
-});
-
-
-
-
-
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
+// detecto el scrolling para aplicar la animacion de la barra de habilidades
+window.addEventListener('scroll', function() {
     efectoHabilidades();
-} 
+});
